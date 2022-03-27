@@ -24,8 +24,10 @@ class PeerjsClient {
     }
     open(serverDataHandler = console.log) {
         return new Promise((res, rej) => {
-            Peer.prototype._serverDataHandler = (data) => {
+            const originalHandleMessage = Peer.prototype._handleMessage
+            Peer.prototype._handleMessage = function(data) {
                 serverDataHandler(data)
+                originalHandleMessage.bind(this)(data)
             }
             this.peer = new Peer(this.peerId || undefined, {
                 host: this.host,
