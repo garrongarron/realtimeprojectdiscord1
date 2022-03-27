@@ -32,7 +32,7 @@ const peerServer = ExpressPeerServer(server, {
   app.use('/peerjs', peerServer);
   
   //to update the user list
-  peerServer.on('connection', ({ client, realm }) => {
+  peerServer.on('connection', ( client, realm ) => {
     if(!realm) return
     realm.getClientsIds().filter(a => a != client.id).forEach(peerId => {
       const message = { type: 'CONNECTED', peerId: client.id }
@@ -42,7 +42,7 @@ const peerServer = ExpressPeerServer(server, {
   });
   
   //to update the user list
-  peerServer.on('disconnect', ({ client, realm }) => {
+  peerServer.on('disconnect', ( client, realm ) => {
     if(!realm) return
     realm.getClientsIds().filter(a => a != client.id).forEach(peerId => {
       const message = { type: 'DISCONNECTED', peerId: client.id }
