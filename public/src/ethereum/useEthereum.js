@@ -1,4 +1,4 @@
-import logo from "./ui/components/Logo.js"
+import logo from "../discord/ui/components/Logo.js"
 
 let active = false
 let error = null

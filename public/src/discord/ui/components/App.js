@@ -1,7 +1,7 @@
 
 import Discord from './Discord.js'
 import ButtonMetaMask from './ButtonMetaMask.js'
-import useEthereum from '../../useEthereum.js'
+import useEthereum from '../../../ethereum/useEthereum.js'
 import peerJsImplementation from '../../../peer-implementation/PeerImplementation.js'
 
 

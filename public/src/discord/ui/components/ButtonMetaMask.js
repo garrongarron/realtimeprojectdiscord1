@@ -1,5 +1,5 @@
 import { setNick } from "../../../voicechat/Nick.js";
-import useEthereum from "../../useEthereum.js";
+import useEthereum from "../../../ethereum/useEthereum.js";
 import logo from "./Logo.js";
 
 
@@ -33,6 +33,3 @@ export default function ButtonMetaMask({ connect }) {
     <div>
     `
 }
-
-
-

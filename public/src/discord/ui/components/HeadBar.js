@@ -1,4 +1,4 @@
-import useEthereum from "../../useEthereum.js"
+import useEthereum from "../../../ethereum/useEthereum.js"
 
 export default function HeadBar(){
     this.enableEvents(['click'])
@@ -13,4 +13,4 @@ export default function HeadBar(){
     <li>${account.slice(0,6)+'...'+account.slice(-4)}</li>
     <li>Placeholder</li>
 </ul>`
-}
+} 
